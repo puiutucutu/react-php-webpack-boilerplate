@@ -53,9 +53,9 @@ module.exports = {
         },
       },
       { test: /\.css$/,  loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap']) },
-      { test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap','less-loader']) },
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap','sass-loader']) },
-      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap','stylus-loader']) },
+      { test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap&importLoaders=1','less-loader']) },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap&importLoaders=1','sass-loader']) },
+      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', ['css-loader?sourceMap&importLoaders=1','stylus-loader']) },
       {
         test: /\.svg$/,
         loader: 'file',
